@@ -1,0 +1,8 @@
+D:\cswords\Projects\TopWidgetsSLN\Solution\bin\Debug\Solution.dll
+D:\cswords\Projects\TopWidgetsSLN\Solution\bin\Debug\Solution.pdb
+D:\cswords\Projects\TopWidgetsSLN\Solution\obj\Debug\Solution.dll
+D:\cswords\Projects\TopWidgetsSLN\Solution\obj\Debug\Solution.pdb
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\Solution\bin\Debug\Solution.dll
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\Solution\bin\Debug\Solution.pdb
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\Solution\obj\Debug\Solution.dll
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\Solution\obj\Debug\Solution.pdb

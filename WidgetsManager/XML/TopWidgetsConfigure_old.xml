@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--maybe it can be done in reflection way, so unused-->
+<Widgets>
+	<!--manager will initialize these plugins in this order-->
+	<plugins>
+    <browser id="miniKM"
+             url="D:\cswords\workspace\TEST_workspace\TopPortalFrame_test2\WebContent\main.html"
+             width="300" height="390">
+      <!--attribute align
+      right-top
+      right-bottom
+      left-top
+      left-bottom
+      top-left
+      top-right
+      -->
+      <align head="none" align="right-top"/>
+    </browser>
+		<!--"login" node will be transmit to LoginMenuItem-->
+    <!--http://portal501.bmcc.com.cn/all_logout.jsp-->
+		<login id="kmlogin" text="Login to KM portal" formPage="http://km/" timeOut="5000">
+			<!--that is a discription of the form-->
+			<form identifier="NAME" variable="Login">
+				<input id="username" identifier="name" variable="USER"  value=""/>
+				<input id="password" identifier="name" variable="PASSWORD"  value=""/>
+				<submit identifier="name" variable="Submit"/>
+			</form>
+      <logout action="http://portal501.bmcc.com.cn/all_logout.jsp" timeOut="5000"/>
+			<!--unused-->
+		</login>
+		<!--globel adapters-->
+		<!--now the adapter is just bmcc adapter,and is hard coded-->
+		<adapter id="kmadapter" type="kmloginadapter" loginId="kmlogin" browserId="miniKM"
+             portalFile="D:\cswords\Projects\WedgetsManager\WebContent\XML\MiniPortal.xml"/>
+	</plugins>
+	<!--manager will run these plugins in this order-->
+	<process>
+		<run pluginId="kmadapter"/>
+		<run pluginId="kmlogin" />
+		<!--run in login-->
+		<!--<run pluginId="miniKM"/>-->
+	</process>
+</Widgets>

@@ -1,0 +1,138 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.20706</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0B506A0-26CE-45E9-B0EA-E6CF67376278}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cn.edu.bhu.top.desktopWidgets.manager</RootNamespace>
+    <AssemblyName>WidgetsManager</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WidgetMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WidgetsManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WidgetsManager.Designer.cs">
+      <DependentUpon>WidgetsManager.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon\favicon.ico" />
+    <Content Include="WebContent\bar\KMDetail\KMBar.js" />
+    <Content Include="WebContent\bar\KMDetail\KMBarLoader.js" />
+    <Content Include="WebContent\bar\KMDetail\kmdetail.xml" />
+    <Content Include="WebContent\bar\KMDetail\KMPortalBar.html" />
+    <Content Include="WebContent\bar\KMTool\KMTool.html" />
+    <Content Include="WebContent\class\Account.js" />
+    <Content Include="WebContent\class\OptionGroup.js" />
+    <Content Include="WebContent\class\Portal.js" />
+    <Content Include="WebContent\css\OptionGroup.css" />
+    <Content Include="WebContent\function\ActiveImport.js" />
+    <Content Include="WebContent\function\AIRAliases.js" />
+    <Content Include="WebContent\function\Cookie.js" />
+    <Content Include="WebContent\function\DomHelper.js" />
+    <Content Include="WebContent\function\FrameMaker.js" />
+    <Content Include="WebContent\function\login.js" />
+    <Content Include="WebContent\function\Request.js" />
+    <Content Include="WebContent\login\eBuddy.html" />
+    <Content Include="WebContent\login\kmbaklogin.html" />
+    <Content Include="WebContent\login\kmlogin.html" />
+    <Content Include="WebContent\login\KMLogout.html" />
+    <Content Include="WebContent\main.html" />
+    <Content Include="WebContent\test.js" />
+    <Content Include="WebContent\test\testSSO.html" />
+    <Content Include="WebContent\XML\MiniPortal.xml" />
+    <Content Include="XML\TopWidgetsConfigure.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XML\TopWidgetsConfigure_old.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugins\Plugins.csproj">
+      <Project>{A366206B-62F7-4B03-A45B-5A02B2AB8ACF}</Project>
+      <Name>Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WidgetForm\WidgetForm.csproj">
+      <Project>{B1B0926D-801C-427E-965B-B8126532D912}</Project>
+      <Name>WidgetForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WidgetsManager.resx">
+      <DependentUpon>WidgetsManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

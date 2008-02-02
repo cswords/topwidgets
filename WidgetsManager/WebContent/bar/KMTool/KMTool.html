@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB18030">
+<title>Insert title here</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 12px;
+	MARGIN: 0px;
+	TEXT-ALIGN: center;
+	background: #dbe6f1;
+	FONT-FAMILY: Tahoma, MS Shell Dlg;
+}
+</style>
+<script type="text/javascript">
+function fastFindUser() {
+	if (beforeSubmit()) {
+		var form=document.getElementById('main');
+		form.setAttribute
+
+('action','http://kmapp01.bmcc.com.cn/bluepage/fastFind.do');
+		eval("form.submit()");
+	}
+}
+function beforeSubmit() {
+	if (document.headFastFindForm.key.value.length > 0) {
+		if(document.headFastFindForm.value.value == ""){
+			alert("请输入关键字!");
+			eval("document.headFastFindForm.value.focus()");
+			return false;
+		}else if(document.headFastFindForm.value.value == "-通迅录搜索-"){
+			alert("请在通迅录搜索框中输入关键字!");
+			document.headFastFindForm.value.value = ""
+				eval("document.headFastFindForm.value.focus()");
+			return false;
+		}else{
+			return true;
+		}
+	} else {
+		alert("请选择搜索范围!");
+		return false;
+	}
+}
+function forwardToUrl(url){
+	if(url==""){
+		alert('');
+		return false;
+	}
+	window.location=url;
+	return true;
+}
+
+function OpenToUrl(url){
+	if(url=="none"){
+		return false;
+	}
+	window.open(url);
+	return true;
+}
+function fastContentSearch() {
+	if (checkContentSearch()) {
+		document.all.headFastFindForm.action = "http://kmapp01.bmcc.com.cn:9081/UniformSearch/uniformSearch.do";
+		eval("document.all.headFastFindForm.submit()");
+	}
+}
+function checkContentSearch()
+{
+	if (document.headFastFindForm.keyword.value=="")
+	{
+		alert("请输入搜索关键字!");
+		eval("document.headFastFindForm.keyword.focus()");
+		return false;
+	}else if (document.headFastFindForm.keyword.value=="-内容搜索-")
+	{
+		alert("请在内容搜索框中输入搜索关键字!");
+		document.headFastFindForm.keyword.value="";
+		eval("document.headFastFindForm.keyword.focus()");
+		return false;
+	}else
+		return true;
+}
+</script>
+</head>
+<body>
+<form id='main' target="_blank" name="headFastFindForm" method="post">
+<select	style="width: 65px; height: 19px; font-size: 12" class="sc" name="key">
+	<option selected="selected" value="userMain.userName">姓名</option>
+	<option value="userMain.userId">帐号</option>
+	<option value="userMain.orgName">部门</option>
+	<option value="userMain.cellPhone">手机</option>
+	<option value="userMain.phone">固定电话</option>
+	<option value="userMain.innerEmail">内部邮件</option>
+</select> 
+<input onclick="javascript:this.form.value.value=''"
+	style="width: 75px; font-size: 12px;" value="-通讯录搜索-" tabindex="0"
+	id="q_1" class="q" name="value" />  
+<a onclick="javascript:fastFindUser()" style="CURSOR: hand;"> 
+	<img border="0" align="top" src="http://portal501.bmcc.com.cn/portalpage2/portal11-
+
+7/img/srch_but_off.gif" />
+</a>   
+<input onclick="javascript:this.form.keyword.value=''"
+	style="width: 65px; font-size: 12px;" value="-内容搜索-" tabindex="0"
+	id="q_2" class="q" name="keyword" maxlength="200" />
+<a onclick="javascript:fastContentSearch()" style="CURSOR: hand;"> 
+	<img border="0" align="top" src="http://portal501.bmcc.com.cn/portalpage2/portal11-
+
+7/img/srch_but_off.gif" />  
+</a>
+<input type="hidden" value="firstSearch" name="searchFlag" />
+<input type="hidden" value="all" name="logicType" />
+<input type="hidden" value="ago" name="datetype" />
+<input type="hidden" value="0" name="lm" />
+<input type="hidden" value="anywhere" name="position" />
+<input type="hidden" id=user name="sm_user" value="km">
+</form>
+<script type="text/javascript" src="../../function/Request.js"></script>
+<script type="text/javascript" src="../../function/DomHelper.js"></script>
+<script type="text/javascript">
+//var uname=Request('uname');
+var uname='';
+var xmlDoc=loadXML("../../XML/MiniPortal.xml");
+var kmaccount=getNode(xmlDoc.documentElement,"account","server","km");
+var unameNode=getNode(kmaccount,"attribute","name","uname");
+eval("uname=unameNode.attributes.getNamedItem('value').nodeValue");
+document.getElementById('user').setAttribute('value', uname);
+</script>
+</body>
+</html>

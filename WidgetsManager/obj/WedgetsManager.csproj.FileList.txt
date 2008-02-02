@@ -1,0 +1,3 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\WedgetsManager.csproj.GenerateResource.Cache
+obj\Release\cn.edu.bhu.top.desktopWidgets.manager.WidgetsManager.resources

@@ -1,0 +1,5 @@
+D:\cswords\Projects\Plugins\bin\Release\Plugins.dll
+D:\cswords\Projects\Plugins\bin\Release\Plugins.pdb
+D:\cswords\Projects\Plugins\obj\Release\ResolveAssemblyReference.cache
+D:\cswords\Projects\Plugins\obj\Release\Plugins.dll
+D:\cswords\Projects\Plugins\obj\Release\Plugins.pdb
