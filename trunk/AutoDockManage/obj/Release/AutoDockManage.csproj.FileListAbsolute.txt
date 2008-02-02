@@ -1,0 +1,7 @@
+D:\cswords\Projects\AutoDockManage\bin\Release\AutoDockManage.dll
+D:\cswords\Projects\AutoDockManage\bin\Release\AutoDockManage.pdb
+D:\cswords\Projects\AutoDockManage\obj\Release\ResolveAssemblyReference.cache
+D:\cswords\Projects\AutoDockManage\obj\Release\QQClient.QQ.QQBuddy.Components.AutoDockManage.resources
+D:\cswords\Projects\AutoDockManage\obj\Release\AutoDockManage.csproj.GenerateResource.Cache
+D:\cswords\Projects\AutoDockManage\obj\Release\AutoDockManage.dll
+D:\cswords\Projects\AutoDockManage\obj\Release\AutoDockManage.pdb

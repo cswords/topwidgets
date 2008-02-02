@@ -1,0 +1,14 @@
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\DemoPlugin.dll
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\DemoPlugin.pdb
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\Plugins.dll
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\Plugins.pdb
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\DemoPlugin.dll
+D:\cswords\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\DemoPlugin.pdb
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\DemoPlugin.dll
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\DemoPlugin.pdb
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\Plugins.dll
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\bin\Debug\Plugins.pdb
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\ResolveAssemblyReference.cache
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\DemoPlugin.dll
+D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\DemoPlugin\obj\Debug\DemoPlugin.pdb

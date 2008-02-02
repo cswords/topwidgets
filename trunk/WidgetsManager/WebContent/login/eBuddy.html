@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>eBuddy MSN login</title>
+<script type="text/javascript" src="../function/DomHelper.js"></script>
+</head>
+<body>
+<form id="login_form" name="login_form"	method="post" action="http://georgia.ebuddy.com/vo074415/login.jsp">
+	<input type="hidden" name="login_network_txt" id="login_network_txt" value="MSN+messenger" />
+	<input type="hidden" name="login_network_hidden" id="login_network_hidden" value="msn" />
+	<input type="text" value="@hotmail.com" id="username" name="username" />
+	<input type="text" value="password" id="password" name="password" />
+	<input type="hidden" name="init_status_txt" id="init_status_txt" value="%E8%81%94%E6%9C%BA"/>
+	<input type="hidden" name="init_status_hidden" id="init_status_hidden" value="NLN" />
+	<button name="login_submit" id="login_submit" type="submit">submit</button>
+	<input type="hidden" id="network" name="network" value="msn"/> 
+	<input type="hidden" id="initial" name="initial" value="NLN"/>
+</form>
+<script type="text/javascript">
+var items=document.getElementById("login_form").getElementsByTagName("Input");
+var uname="";
+var pwd="";
+
+var xmlDoc=loadXML("../XML/MiniPortal.xml");
+var kmaccount=getNode(xmlDoc.documentElement,"account","server","eBuddyMSN");
+var unameNode=getNode(kmaccount,"attribute","name","uname");
+var pwdNode=getNode(kmaccount,"attribute","name","upwd");
+eval("uname=unameNode.attributes.getNamedItem('value').nodeValue");
+eval("pwd=pwdNode.attributes.getNamedItem('value').nodeValue");
+document.getElementById("username").attributes.getNamedItem("value").nodeValue=uname;
+document.getElementById("password").attributes.getNamedItem("value").nodeValue=pwd;
+eval("document.login_form.submit()");
+eval("document.all.submit.click()");
+</script>
+</body>
+</html>

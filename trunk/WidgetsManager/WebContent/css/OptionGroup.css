@@ -1,0 +1,33 @@
+.tabs {
+	width: auto;
+	height: auto;
+	border: 0px solid red;
+}
+
+.selectTab,.unselectTab {
+	border: 1px solid #BDDFF9;
+	border-bottom-width: 0;
+	word-break:break-all;
+	height: 23px;
+	line-height: 23px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #37709B;
+	margin: 0;
+	
+	font-weight: bold;
+	font-size: 14px;
+	color: #FFF;
+	cursor: pointer;
+	float: left;
+}
+
+.selectContent { 
+    border-top: 5px #37709b solid; 
+    padding-top: 8px; 
+    clear: both; 
+ } 
+.unselectTab {
+	color: #37709B;
+	background-color: white;
+}

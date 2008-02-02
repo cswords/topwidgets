@@ -1,0 +1,7 @@
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\obj\Debug\ResolveAssemblyReference.cache
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\bin\Debug\PluginManagerTest.exe
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\bin\Debug\PluginManagerTest.pdb
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\bin\Debug\Plugins.dll
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\bin\Debug\Plugins.pdb
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\obj\Debug\PluginManagerTest.exe
+D:\cswords\Projects\TopWidgetsSLN\PluginManagerTest\obj\Debug\PluginManagerTest.pdb

@@ -1,0 +1,154 @@
+<kmdetail>
+	<kmbar name='mail' href='http://oavs01/exchange/'
+		text='内网邮箱(Exchange)'>
+		<detail
+			script="http://kmxp.bmcc.com.cn/ep/KM/MailBoxInfoxml.ASP"
+			length='1'>
+			<segment index='0' text="封未读邮件" />
+		</detail>
+	</kmbar>
+	<kmbar name='_mail' href='http://portal501.bmcc.com.cn/oa/mail.html'
+		text='内网邮箱'>
+		<detail
+			script="http://kmxp.bmcc.com.cn/ep/KM/MailBoxInfoxml.ASP"
+			length='1'>
+			<segment index='0' text="封未读邮件" />
+		</detail>
+	</kmbar>
+	<kmbar name='_oa' href='http://portal501.bmcc.com.cn/oa/oa.html'
+		text='电子办公'>
+		<detail script="http://kmxp.bmcc.com.cn/ep/KM/oaInfoxml.ASP"
+			length='2'>
+			<segment index='0' text="件待办" />
+			<segment index='1' text="件超时" />
+		</detail>
+	</kmbar>
+	<kmbar name='oa' href='http://oavs01.bmcc.com.cn/eoffice/oa3/content.asp'
+		text='电子办公'>
+		<attribute name='UserName'>
+			<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<detail script="http://kmxp.bmcc.com.cn/ep/KM/oaInfoxml.ASP"
+			length='2'>
+			<segment index='0' text="件待办" />
+			<segment index='1' text="件超时" />
+		</detail>
+		<!-- 
+		<detail script="about:blank" length='0'/> -->
+	</kmbar>
+	<kmbar name='GlFlow'
+		href='http://10.4.41.171:9080/servlet/WFController' text='管理流程系统'>
+		<attribute name='username'>
+			<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<attribute name='command'>
+			<constant value='logon' />
+		</attribute>
+		<attribute name='authMethod'>
+			<constant value='portal2' />
+		</attribute>
+		<attribute name='op'>
+			<constant value='null' />
+		</attribute>
+		<detail
+			script="http://10.4.41.171:9080/jsp/queryManagePortalwi_result2.jsp"
+			length='1'>
+			<attribute name='username'>
+				<reference refPortal='km' refAttribute='uname' />
+			</attribute>
+			<segment index='0' text="件待办" />
+		</detail>
+	</kmbar>
+	<kmbar name='YwFlow'
+		href='http://ewf.bmcc.com.cn:9080/servlet/WFController'
+		text='业务流程系统'>
+		<attribute name='username'>
+			<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<attribute name='command'>
+			<constant value='logon' />
+		</attribute>
+		<attribute name='authMethod'>
+			<constant value='portal2' />
+		</attribute>
+		<attribute name='op'>
+			<constant value='null' />
+		</attribute>
+		<detail
+			script="http://ewf.bmcc.com.cn/jsp/queryBusinessPortalwi_result.jsp"
+			length='1'>
+			<attribute name='username'>
+				<reference refPortal='km' refAttribute='uname' />
+			</attribute>
+			<segment index='0' text="件待办" />
+		</detail>
+	</kmbar>
+	<kmbar name='HrFlow' href='http://10.4.41.171:9080/HRPortal.jsp'
+		text='绩效管理流程系统'>
+		<attribute name='userid'>
+			<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<detail
+			script="http://10.4.41.171:9080/jsp/queryHRPortalwi_result2.jsp"
+			length='1'>
+			<attribute name='username'>
+				<reference refPortal='km' refAttribute='uname' />
+			</attribute>
+			<segment index='0' text="件待办" />
+		</detail>
+	</kmbar>
+	<kmbar name='epm'
+		href='http://epm.bmcc.com.cn:8080/a7/servlet/LoginFromEPMPortal'
+		text='企业项目管理'>
+		<attribute name='loginId'>
+			<!-- <reference refPortal='km' refAttribute='upperName' /> -->
+			<constant value='HEZILIN' />
+		</attribute>
+		<attribute name='auth'>
+			<constant value='true' />
+		</attribute>
+		<attribute name='from'>
+			<constant value='epm.bmcc.com.cn' />
+		</attribute>
+		<detail script="http://epm.bmcc.com.cn:8080/sso/jsp/km.jsp"
+			length='1'>
+			<attribute name='userid'>
+				<reference refPortal='km' refAttribute='uname' />
+			</attribute>
+			<segment index='0' text="件待办工作" />
+		</detail>
+	</kmbar>
+	<!-- 
+		<kmbar name='epm'
+		href='http://epm.bmcc.com.cn:8080/a7/servlet/LoginFromEPMPortal'
+		text='企业项目管理'>
+		<attribute name='fieldKmu'>
+		<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<detail script="http://epm.bmcc.com.cn:8080/sso/jsp/km.jsp"
+		length='1'>
+		<attribute name='userid'>
+		<reference refPortal='km' refAttribute='uname' />
+		</attribute>
+		<segment index='0' text="件待办工作" />
+		</detail>
+		</kmbar>
+	-->
+	<kmbar name='LegalAffair'
+		href='http://kmapp02.bmcc.com.cn:81/Contract/valid.jsp'
+		text='法务管理系统'>
+		<attribute name='uid'>
+			<reference refPortal='km' refAttribute='uname' />
+		</attribute> 
+		<attribute name='inPortal'>
+			<constant value='true' />
+		</attribute>
+		<detail script="http://10.4.41.180:81/Contract/count.servlet"
+			length='1'>
+			<attribute name='uid'>
+				<reference refPortal='km' refAttribute='uname' />
+			</attribute>
+			<segment index='0' text="件待办" />
+		</detail>
+	</kmbar>
+</kmdetail>
