@@ -22,10 +22,5 @@ namespace __TopWidgets_Test
             }
             Application.Run();
         }
-
-        static void copyPlugins()
-        {
-
-        }
     }
 }
