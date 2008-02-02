@@ -11,7 +11,7 @@
 
     <assemble dll="WidgetFormLoaderPlugin.dll"
          name="cn.edu.bhu.top.desktopWidgets.form.plugin.WidgetFormLoader"
-         address="D:\cswords\Widgets@Codeplex\Projects\TopWidgetsSLN\WidgetFormLoaderPlugin\bin\Debug\"/>
+         address="D:\cswords\Widgets@Google\TopWidgets\WidgetFormLoaderPlugin\bin\Debug\"/>
     <plugin id="FormLoaderTest" name="cn.edu.bhu.top.desktopWidgets.form.plugin.WidgetFormLoader">
       <menuItem text="test haha"/>
       <page url="http://km/"/>
