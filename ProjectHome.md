@@ -1,0 +1,1 @@
+It's just like adobe AIR. But it was built on DotNet2.0. It used WebBrowser control(a dotnet component with IE core). And all the function was built in a plugin way. Plugins is controled by a manager which just show an icon on the windows system bar.
